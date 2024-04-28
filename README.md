@@ -1,11 +1,13 @@
 # Simple HTTP server with upload functionality
 
-This script allows the user to create an HTTP server on the fly for file sharing inside a home network.
+This is a simple HTTP server which does not require JavaScript to work. Its purpose is to upload photos to [Immich](https://immich.app) from devices which are not compatible with JavaScript.
 
 ## Installation
 
+[immich-cli](https://immich.app/docs/features/command-line-interface/) is required. Authenticate first with ``immich login``
+
 ```
-git clone https://github.com/sgrontflix/simplehttpserverwithupload
+git clone https://github.com/k2helix/simplehttpserverwithupload
 cd simplehttpserverwithupload
 ```
 

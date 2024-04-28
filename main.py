@@ -14,6 +14,7 @@ import ssl
 import sys
 import urllib.parse
 import uuid
+import subprocess
 from functools import partial
 from http import HTTPStatus
 
@@ -79,6 +80,7 @@ class SimpleHTTPRequestHandlerWithUpload(http.server.SimpleHTTPRequestHandler):
         if f:
             self.copyfile(f, self.wfile)
             f.close()
+            subprocess.run(["immich", "upload", f'{", ".join(message)}', "-A", "Nintendo"])
 
     def handle_upload(self):
         """Handle the file upload."""
